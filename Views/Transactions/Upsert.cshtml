@@ -1,0 +1,69 @@
+﻿@model TransactionHistoryMVC.Models.Transaction
+
+<br />
+<h2 class="text-info">@(Model.Id !=0 ? "Edit" : "Create") Transaction</h2>
+
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        @if (Model.Id != 0)
+        {
+            <input type="hidden" asp-for="Id" />
+        }
+
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row ">
+            <div class="col-3">
+                <i class="fas fa-file-signature"></i>
+                <label asp-for="BeneficiaryName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="BeneficiaryName" class="form-control" />
+                <span asp-validation-for="BeneficiaryName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row ">
+            <div class="col-3">
+                <i class="fas fa-comment-dollar"></i>
+                <label asp-for="Amount"></label>
+
+            </div>
+            <div class="col-6">
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group row ">
+            <div class="col-3">
+                <i class="fas fa-clock"></i>
+                <label asp-for="Date"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <button type="submit" class="btn btn-primary form-control "><i class="fas fa-share"></i>
+                    @(Model.Id !=0 ? "Update" : "Create")
+                </button>
+            </div>
+            <div class="col-3">
+                <a asp-action="Index" class="btn btn-success form-control">Back to List <i class="fas fa-undo"></i></a>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

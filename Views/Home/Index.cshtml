@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="font-weight-light">Welcome <i class="fas fa-hands-helping"></i> !</h1>
+                <p class="lead">Roweb project by Marin Marian</p>
+
+                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#About">
+                    <i class="fas fa-eject"></i> About
+                </button>
+                <div class="modal fade" id="About" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">TransactionHistoryMVC <i class="fas fa-project-diagram"></i></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <div class="media">
+                                        <img src="~/css/img/avatar.png" style="height:110px;" alt="Avatar">
+
+                                    </div>
+                                </div>
+                                <h5 class="mt-1">Salutare,</h5>
+                                <p>In primul rand iti multumesc ca esti aici, acest program este menit pentru a te ajuta in ati tine cheltuielile planificate.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+
+   
+<div class="d-flex bd-highlight">
+   
+    <button type="button" class="btn btn-outline-danger" onclick="location.href='@Url.Action("Index","Youtube")'"><i class="fab fa-youtube"></i> Youtube</button>
+    <button type="button" class="btn btn-outline-primary pull-right ml-auto" onclick="location.href='@Url.Action("Index","Nasa")'"><i class="fas fa-space-shuttle"></i> NASA </button>
+
+</div>
+
+
+
+
+
+
+
